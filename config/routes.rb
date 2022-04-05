@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'searches/search'
   root to: "homes#top"
   get 'home/about' => 'homes#about', as: "about"
   devise_for :users
@@ -11,5 +12,6 @@ Rails.application.routes.draw do
     resources :book_comments, only: [:create, :destroy]
     resource :favorites, only: [:create, :destroy]
   end
+  get 'search' => 'searches#search', as: 'search'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

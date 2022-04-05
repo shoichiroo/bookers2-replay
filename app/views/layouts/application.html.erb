@@ -73,6 +73,9 @@
     <% if flash[:notice] %>
       <%= flash[:notice] %>
     <% end %>
+    <div class="d-flex justify-content-center mb-2">
+      <%= render 'searches/form' %>
+    </div>
     <%= yield %>
     <div class="container mt-5">
       <div class="row">
